@@ -77,7 +77,8 @@ class InAppSilentPushSynchronizer : InAppSynchronizerProtocol {
     }
     
     // how many messages to fetch
-    private let numMessages = 100
+    // 若请求的消息列表内容过大 则不能正常接收 故限定此值
+    private let numMessages = 5
 }
 
 
